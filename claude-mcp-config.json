@@ -1,0 +1,11 @@
+{
+    "mcpServers": {
+      "docker-toolkit-git": {
+        "command": "node",
+        "args": ["/usr/lib/node_modules/@docker/mcp-toolkit/dist/git.js"],
+        "env": {
+          "MCP_GIT_ROOT": "/app"
+        }
+      }
+    }
+  }

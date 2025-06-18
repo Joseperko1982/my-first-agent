@@ -1,0 +1,20 @@
+services:
+  app:
+    build: .
+    container_name: my-first-agent
+    ports:
+      - "3002:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+      - claude-config:/root/.claude
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+    stdin_open: true
+    tty: true
+    command: npm run dev
+
+volumes:
+  claude-config:
